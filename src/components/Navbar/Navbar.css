@@ -4,9 +4,36 @@
     align-items: center;
     padding: 8px 4%;
 }
+
 .navbar .logo{
     width: max(10%,80px);
+    cursor: pointer;
 }
+
 .navbar .profile{
-    width: 50px;
+    width: 40px;
+    cursor: pointer;
+}
+
+/* Right side container */
+.nav-right{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Logout Button */
+.logout-btn{
+    background:tomato;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.logout-btn:hover{
+    background: tomato;
 }

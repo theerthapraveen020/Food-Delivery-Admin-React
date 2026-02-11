@@ -1,15 +1,34 @@
 import React from 'react'
 import './Navbar.css'
-import {assets} from '../../assets/assets'
+import { assets } from '../../assets/assets'
+import { useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
+
+  const navigate = useNavigate();
+
+  const logout = () => {
+    localStorage.removeItem("adminToken");
+    navigate("/login");
+  };
+
   return (
     <div className='navbar'>
-      <img className='logo' src={assets.logo} alt="" />
-      <img className='profile' src={assets.profile_image} alt="" />
-      
+      <img
+        className='logo'
+        src={assets.logo}
+        alt="logo"
+        onClick={() => navigate("/add")}
+        style={{ cursor: "pointer" }}
+      />
+
+      <div className="nav-right">
+        <img className='profile' src={assets.profile_image} alt="profile" />
+        <button onClick={logout} className="logout-btn">Logout</button>
+      </div>
     </div>
   )
 }
 
 export default Navbar
+
