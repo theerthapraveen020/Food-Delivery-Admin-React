@@ -13,7 +13,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch("https://food-delivery-mern-cpcg.onrender.com", {
+      const res = await fetch("https://food-delivery-mern-cpcg.onrender.com/api/admin/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
